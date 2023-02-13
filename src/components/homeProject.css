@@ -1,0 +1,4 @@
+/* on hover of the project the text comes into view */
+.projectDiv:hover .projectParagraph {
+  transform: translateY(-50px);
+}
