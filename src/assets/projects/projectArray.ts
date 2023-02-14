@@ -1,31 +1,30 @@
-import chessBanner from "./chessProjBanner.png";
-import lodgeBanner from "./cssProjBanner.png";
-import eCommerceBanner from "./eCommerceProjBanner.png";
+import { staticInfo } from "./static/staticInfo";
+import { eCommerceInfo } from "./eCommerce/eCommerceInfo";
+import { chessInfo } from "./chess/chessInfo";
+import { kanbanInfo } from "./kanban/kanbanInfo";
+
+type GridSpan = {
+  xl: number[];
+  lg: number[];
+  md: number[];
+};
 
 export type Project = {
   bannerImage: string;
   title: string;
   description: string;
-  gridPos: number[];
+  gridSpan: GridSpan;
+  highlights: string;
+  techs: string[];
+  gitLink: string;
+  siteLink: string;
+  motivation: string[];
+  keyLearnings: string[];
 };
 
 export const projectArray: Project[] = [
-  {
-    bannerImage: chessBanner,
-    title: "Chess Site",
-    description: "This is just Chess App",
-    gridPos: [1, 2, 1, 3],
-  },
-  {
-    bannerImage: lodgeBanner,
-    title: "Static Page",
-    description: "A static page for an Uncle's Lodge",
-    gridPos: [3, 2, 1, 2],
-  },
-  {
-    bannerImage: eCommerceBanner,
-    title: "E-Commerce Website",
-    description: "A fully functioning mock-up for an e-commerce website",
-    gridPos: [3, 2, 3, 2],
-  },
+  eCommerceInfo,
+  chessInfo,
+  kanbanInfo,
+  staticInfo,
 ];

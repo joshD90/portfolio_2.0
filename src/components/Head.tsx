@@ -8,10 +8,10 @@ const Head: FC = () => {
   return (
     <div className="w-full h-screen flex relative">
       <div className="w-1/2 h-full bg-emerald-600 text-white pr-5 overflow-hidden">
-        <div className="h-1/4 sm:h-1/3 w-full flex items-end justify-end">
+        <div className="h-1/4 sm:h-1/3 flex items-end justify-end">
           <h1 className="text-8xl sm:text-9xl p-0 m-0">Hi.</h1>
         </div>
-        <div className="h-64 sm:h-48"></div>
+        <div className="h-2/5 sm:h-48"></div>
         <div className="w-full flex justify-end">
           <h2 className="text-xl sm:text-4xl w-1/2 text-right font-bold">
             A Full Stack
@@ -25,14 +25,16 @@ const Head: FC = () => {
         </button>
       </div>
       {/* right hand side */}
-      <div className="w-1/2 h-full text-stone-700 pl-5 overflow-hidden">
-        <div className="h-1/4 sm:h-1/3 w-full flex items-end justify-start">
+      <div className="w-1/2 h-full text-stone-700  overflow-hidden">
+        <div className="h-1/4 sm:h-1/3 flex items-end justify-start ml-5">
           <h2 className="text-xl sm:text-3xl p-0 sm:mb-2 font-bold w-4/5">
             My name is Josh
           </h2>
         </div>
-        <div className="h-64 sm:h-48"></div>
-        <h2 className="text-2xl sm:text-5xl font-bold w-1/2">Web Developer</h2>
+        <div className="h-2/5 sm:h-48"></div>
+        <h2 className="text-2xl sm:text-5xl font-bold w-1/2 ml-5">
+          Web Developer
+        </h2>
         <button className="absolute shadow-md bottom-10 left-1/2 p-3 rounded-md translate-x-1/3 bg-emerald-500 text-white font-bold flex items-center opacity-90 hover:opacity-100 hover:shadow-xl">
           Contact <SendIcon style={{ fontSize: "1.2rem" }} className="pl-1" />
         </button>

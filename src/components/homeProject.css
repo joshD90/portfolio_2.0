@@ -1,4 +1,11 @@
 /* on hover of the project the text comes into view */
 .projectDiv:hover .projectParagraph {
-  transform: translateY(-50px);
+  transform: translateY(-110%);
+}
+.projectDiv:hover img {
+  filter: brightness(0.2);
+}
+
+.projectDiv:hover button {
+  opacity: 0.8;
 }
