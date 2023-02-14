@@ -1,5 +1,5 @@
 import { Project } from "../projectArray";
-import trelloBanner from "./trello.png";
+import trelloBanner from "../trello.png";
 
 export const kanbanInfo: Project = {
   bannerImage: trelloBanner,

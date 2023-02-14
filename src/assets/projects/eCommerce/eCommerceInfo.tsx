@@ -1,4 +1,4 @@
-import eCommerceBanner from "./eCommerceProjBanner.png";
+import eCommerceBanner from "../eCommerceProjBanner.png";
 import { Project } from "../projectArray";
 
 export const eCommerceInfo: Project = {

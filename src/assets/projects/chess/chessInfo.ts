@@ -1,4 +1,4 @@
-import chessBanner from "./chessProjBanner.png";
+import chessBanner from "../chessProjBanner.png";
 import { Project } from "../projectArray";
 
 export const chessInfo: Project = {

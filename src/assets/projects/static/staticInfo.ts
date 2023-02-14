@@ -1,4 +1,4 @@
-import lodgeBanner from "./cssProjBanner.png";
+import lodgeBanner from "../cssProjBanner.png";
 import { Project } from "../projectArray";
 
 export const staticInfo: Project = {

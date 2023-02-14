@@ -1,7 +1,6 @@
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "./swiper.scss";
 
 // Import Swiper styles
 import "swiper/css";
@@ -34,12 +33,11 @@ export default ({ swiperImages }: { swiperImages: SwiperImage[] }) => {
       >
         {swiperImages.map((info, index) => {
           return (
-            <SwiperSlide key={index}>
-              <img
-                src={info.image}
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-              <p className="swiperText">{info.text}</p>
+            <SwiperSlide key={index} className="relative">
+              <img src={info.image} className="w-full h-full object-contain" />
+              <p className="absolute bottom-1 left-0 text-sm sm:text-md md:text-lg bg-stone-800 bg-opacity-80 rounded-sm text-emerald-50">
+                {info.text}
+              </p>
             </SwiperSlide>
           );
         })}

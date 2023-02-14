@@ -1,16 +1,18 @@
-import Head from "./components/Head";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import LandingPage from "./containers/LandingPage";
 import Navbar from "./components/Navbar";
+import SingleProject from "./components/SingleProject";
 
 function App() {
   return (
-    <div className="w-screen overflow-hidden">
+    <Router>
       <Navbar />
-      <Head />
-      <Skills />
-      <Projects />
-    </div>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/projects/:projectName" element={<SingleProject />} />
+      </Routes>
+    </Router>
   );
 }
 
