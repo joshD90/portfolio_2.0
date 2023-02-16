@@ -8,12 +8,16 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-type SwiperImage = {
+import "./swiper.css";
+
+export type SwiperImage = {
   image: string;
   text: string;
 };
 
 export default ({ swiperImages }: { swiperImages: SwiperImage[] }) => {
+  console.log(swiperImages);
+
   return (
     <>
       <Swiper
@@ -23,7 +27,7 @@ export default ({ swiperImages }: { swiperImages: SwiperImage[] }) => {
         slidesPerView={1}
         navigation
         scrollbar={{ draggable: true }}
-        loop={true}
+        loop={false}
         style={{
           height: "inherit",
           width: "inherit",
@@ -32,10 +36,11 @@ export default ({ swiperImages }: { swiperImages: SwiperImage[] }) => {
         }}
       >
         {swiperImages.map((info, index) => {
+          console.log(info, index);
           return (
-            <SwiperSlide key={index} className="relative">
+            <SwiperSlide key={info.image} className="relative">
               <img src={info.image} className="w-full h-full object-contain" />
-              <p className="absolute bottom-1 left-0 text-sm sm:text-md md:text-lg bg-stone-800 bg-opacity-80 rounded-sm text-emerald-50">
+              <p className="absolute bottom-1 left-0 text-sm sm:text-md md:text-lg bg-stone-800 bg-opacity-80 rounded-sm text-emerald-50 p-5 w-full text-center">
                 {info.text}
               </p>
             </SwiperSlide>

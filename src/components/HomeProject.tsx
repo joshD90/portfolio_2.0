@@ -1,5 +1,4 @@
 import { FC, useEffect, useState } from "react";
-import OpenInFullIcon from "@mui/icons-material/OpenInFull";
 
 import { Project } from "../assets/projects/projectArray";
 import gridSpanGenerator from "../utils/gridSpanGenerator";
@@ -29,7 +28,7 @@ const HomeProject: FC<props> = ({ project }) => {
 
   return (
     <section
-      className={`shadow-md rounded-md overflow-hidden border-2 border-stone-500 relative projectDiv bg-red-400`}
+      className={`shadow-md rounded-md overflow-hidden border-2 border-stone-500 relative projectDiv hover:scale-105 transition-all`}
       style={{
         gridRow: `span ${gridSpan[0]}`,
         gridColumn: `span ${gridSpan[1]}`,
@@ -37,7 +36,7 @@ const HomeProject: FC<props> = ({ project }) => {
     >
       <img
         src={project.bannerImage}
-        className="w-full h-full  brightness-75 hover:brightness-50 cursor-pointer object-cover"
+        className="w-full h-full  brightness-75 hover:brightness-50 cursor-pointer object-cover transition-all"
       />
       <h1 className="text-white absolute top-2 left-2 text-2xl drop-shadow-lg shadow-black p-2 rounded-md bg-stone-800 bg-opacity-30">
         {project.title}
