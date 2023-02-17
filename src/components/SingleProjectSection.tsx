@@ -9,8 +9,7 @@ type Props = {
 const SingleProjectSection: FC<Props> = ({ title, content, child }) => {
   if (child)
     return (
-      <section className="bg-white shadow-lg p-5 pt-3 text-center mb-10 text-stone-800 bg-opacity-90">
-        <h4 className="text-stone-600 mb-5 text-xl ">Key Techs Used</h4>
+      <section className="bg-white shadow-lg p-5 pt-3 mb-10 text-stone-800 bg-opacity-90">
         {child}
       </section>
     );

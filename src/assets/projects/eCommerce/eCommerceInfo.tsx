@@ -37,4 +37,5 @@ export const eCommerceInfo: Project = {
     "More complex database documents and using aggregation in MongoDB",
     "Security and Passport.js",
   ],
+  link: "eCommerce",
 };

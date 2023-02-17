@@ -26,7 +26,7 @@ function Contact() {
 
   return (
     <div
-      className="w-full h-screen flex flex-col items-center justify-center"
+      className="w-full h-screen flex flex-col items-center justify-center pt-10"
       style={{
         backgroundImage:
           "linear-gradient(to right, rgb(209 250 229) 0 50%,rgb(236 253 245)50% 100%)",
@@ -65,7 +65,7 @@ function Contact() {
               name="message"
               required={true}
               //   onChange={handleChange}
-              className="h-52 rounded-sm p-2 max-h-80"
+              className="h-52 rounded-sm p-2"
             />
             <div className="self-end mt-5 p-2 bg-emerald-600 text-white text-xl rounded-md px-4 hover:bg-emerald-500 hover:shadow-lg">
               <button type="submit" disabled={state.submitting}>

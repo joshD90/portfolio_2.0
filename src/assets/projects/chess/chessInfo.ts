@@ -19,4 +19,5 @@ export const chessInfo: Project = {
     "I have been passionate about chess for a number of years and so decided that this would be an opportunity to demonstrate a capacity for a larger scale game to demonstrate a range of my skills.",
     "I had previously used recursive directional square checking in an X's and O's game.  All of the game logic was self-conceptualised and there was no follow along tutorials in helping me build this project",
   ],
+  link: "chess",
 };

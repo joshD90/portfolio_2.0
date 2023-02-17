@@ -9,6 +9,7 @@ import AboutMe from "../components/AboutMe";
 const LandingPage: FC = () => {
   const location = useLocation();
   const aboutRef = createRef<HTMLDivElement>();
+  const projectsRef = createRef<HTMLDivElement>();
 
   useEffect(() => {
     if (location.state?.aboutScroll) {
@@ -17,11 +18,18 @@ const LandingPage: FC = () => {
     }
   }, [aboutRef]);
 
+  const goToAbout = () => {
+    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const goToProjects = () => {
+    projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="w-screen overflow-hidden">
-      <Head />
+      <Head goToAbout={goToAbout} goToProjects={goToProjects} />
       <Skills />
-      <Projects />
+      <Projects ref={projectsRef} />
       <AboutMe ref={aboutRef} />
     </div>
   );

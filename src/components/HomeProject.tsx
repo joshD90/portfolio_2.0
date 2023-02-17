@@ -1,4 +1,5 @@
 import { FC, useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
 import { Project } from "../assets/projects/projectArray";
 import gridSpanGenerator from "../utils/gridSpanGenerator";
@@ -10,6 +11,7 @@ type props = {
 const HomeProject: FC<props> = ({ project }) => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [gridSpan, setGridSpan] = useState([1, 1]);
+  const navigate = useNavigate();
 
   //set a listener for our screen width change
   useEffect(() => {
@@ -33,6 +35,7 @@ const HomeProject: FC<props> = ({ project }) => {
         gridRow: `span ${gridSpan[0]}`,
         gridColumn: `span ${gridSpan[1]}`,
       }}
+      onClick={() => navigate(`/projects/${project.link}`)}
     >
       <img
         src={project.bannerImage}

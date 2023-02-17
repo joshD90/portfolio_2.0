@@ -20,6 +20,7 @@ export type Project = {
   siteLink: string;
   motivation: string[];
   keyLearnings: string[];
+  link: string;
 };
 
 export const projectArray: Project[] = [

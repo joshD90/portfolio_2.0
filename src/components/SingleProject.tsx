@@ -1,6 +1,8 @@
 import { FC, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+import { LanguageOutlined, GitHub } from "@mui/icons-material";
+
 import Swiper from "./Swiper";
 
 import { SwiperImage } from "./Swiper";
@@ -50,23 +52,27 @@ const SingleProject: FC = () => {
   //stick a title on top
   return (
     <div
-      className="w-full flex flex-col items-center sm:p-5 md:p-10 bg-emerald-50 pt-16 sm:pt-16 md:pt-16"
+      className="w-screen px-0 sm:w-full flex flex-col items-center sm:p-5 md:p-10 bg-emerald-50 pt-16 sm:pt-16 md:pt-16"
       style={{
         backgroundImage:
           "linear-gradient(to right, rgb(209 250 229) 0 50%,rgb(236 253 245)50% 100%)",
       }}
     >
       {/* swiper */}
-      <section className="w-full md:w-4/5 lg:w-2/3">
+      <section className="w-screen md:w-4/5 lg:w-2/3">
         <div className="w-full flex flex-wrap justify-center">
           <h1 className="w-full text-center text-3xl text-stone-600 pb-5">
             {info.title}
           </h1>
           <Swiper swiperImages={projectInfo.images} />
         </div>
-        <div className="p-10 w-full flex items-center justify-center gap-5">
-          <button>Live Website</button>
-          <button>Source Code</button>
+        <div className="p-10 w-full flex items-center justify-center gap-5 font-bold text-stone-600 mr-5">
+          <button className="text-sm p-1 sm:text-lg sm:p-2 rounded-md bg-white border-2 border-stone-500 shadow-sm hover:text-stone-800 hover:shadow-lg hover:border-stone-800 flex items-center gap-2">
+            Live Website <LanguageOutlined />
+          </button>
+          <button className="p-1 text-sm sm:text-lg sm:p-2 rounded-md bg-emerald-100 border-2 border-stone-500 shadow-sm hover:text-stone-800 hover:shadow-lg ml-5 hover:border-stone-800 flex items-center gap-2">
+            Source Code <GitHub />
+          </button>
         </div>
       </section>
       {/* information section */}
@@ -77,8 +83,11 @@ const SingleProject: FC = () => {
           content={info.highlights}
         />
         <SingleProjectSection
+          child={<SingleProjTechs techs={info.techs} title="Key Techs Used" />}
+        />
+        <SingleProjectSection
           child={
-            <SingleProjTechs techs={[...info.techs, ...info.keyLearnings]} />
+            <SingleProjTechs techs={info.keyLearnings} title="Key Learnings" />
           }
         />
         <SingleProjectSection

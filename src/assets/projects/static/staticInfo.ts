@@ -18,4 +18,5 @@ export const staticInfo: Project = {
     "I wanted to take on a project that would allow me to engage with parallax and more complex responsive design",
   ],
   keyLearnings: ["Incorporating parallax with a React Project"],
+  link: "static",
 };

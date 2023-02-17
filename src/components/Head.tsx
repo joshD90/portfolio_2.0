@@ -4,7 +4,12 @@ import profilePic from "../assets/porfolio.jpg";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import SendIcon from "@mui/icons-material/Send";
 
-const Head: FC = () => {
+type Props = {
+  goToAbout: () => void;
+  goToProjects: () => void;
+};
+
+const Head: FC<Props> = ({ goToAbout, goToProjects }) => {
   return (
     <div className="w-full h-screen flex relative">
       <div className="w-1/2 h-full bg-emerald-600 text-white pr-5 overflow-hidden">
@@ -20,6 +25,7 @@ const Head: FC = () => {
         <button
           className="absolute shadow-md bottom-10 left-1/2 p-3 rounded-md bg-white text-stone-600 font-bold opacity-90 hover:opacity-100 hover:shadow-xl"
           style={{ transform: "translateX(-133%)" }}
+          onClick={goToProjects}
         >
           Projects
         </button>
@@ -54,11 +60,12 @@ const Head: FC = () => {
           </div>
         </div>
       </div>
-
-      <img
-        src={profilePic}
-        className="h-36 w-36 object-cover rounded-full border-8 border-stone-700 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 shadow-sm cursor-pointer"
-      />
+      <div onClick={goToAbout}>
+        <img
+          src={profilePic}
+          className="h-36 w-36 object-cover rounded-full border-8 border-stone-700 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 shadow-sm cursor-pointer"
+        />
+      </div>
     </div>
   );
 };

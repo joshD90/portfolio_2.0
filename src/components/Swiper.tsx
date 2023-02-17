@@ -39,8 +39,8 @@ export default ({ swiperImages }: { swiperImages: SwiperImage[] }) => {
           console.log(info, index);
           return (
             <SwiperSlide key={info.image} className="relative">
-              <img src={info.image} className="w-full h-full object-contain" />
-              <p className="absolute bottom-1 left-0 text-sm sm:text-md md:text-lg bg-stone-800 bg-opacity-80 rounded-sm text-emerald-50 p-5 w-full text-center">
+              <img src={info.image} className="h-full object-contain" />
+              <p className="absolute bottom-1 left-0 text-sm sm:text-md md:text-lg bg-stone-800 bg-opacity-80 rounded-sm text-emerald-50 p-2 sm:p-3 md:p-5 w-full text-center">
                 {info.text}
               </p>
             </SwiperSlide>

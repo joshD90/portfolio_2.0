@@ -5,11 +5,11 @@ const Footer = () => {
   return (
     <div className="bg-emerald-600 h-20 flex items-center text-emerald-50 justify-between p-5 text-sm">
       <div className="md:w-1/3">
-        <div className="flex items-center">
+        <div className="flex items-center gap-2">
           <Email />
           <span>joshuadancey@hotmail.com</span>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center gap-2">
           <Phone />
           <span>085 237 4436</span>
         </div>

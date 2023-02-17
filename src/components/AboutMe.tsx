@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import SingleProjectSection from "./SingleProjectSection";
 import { aboutMe } from "../assets/aboutMe";
 
-type Ref = HTMLDivElement;
+export type Ref = HTMLDivElement;
 
 const AboutMe = React.forwardRef<Ref>((props, ref) => {
   return (
