@@ -1,5 +1,6 @@
 import { createRef, FC, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import Head from "../components/Head";
 import Skills from "../components/Skills";
@@ -26,12 +27,16 @@ const LandingPage: FC = () => {
   };
 
   return (
-    <div className="w-screen overflow-hidden">
+    <motion.div
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
+    >
       <Head goToAbout={goToAbout} goToProjects={goToProjects} />
       <Skills />
       <Projects ref={projectsRef} />
       <AboutMe ref={aboutRef} />
-    </div>
+    </motion.div>
   );
 };
 

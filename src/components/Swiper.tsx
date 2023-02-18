@@ -30,9 +30,9 @@ export default ({ swiperImages }: { swiperImages: SwiperImage[] }) => {
         loop={false}
         style={{
           height: "inherit",
-          width: "inherit",
-          margin: "inherit",
-          padding: "inherit",
+          width: "100%",
+          padding: 0,
+          margin: 0,
         }}
       >
         {swiperImages.map((info, index) => {

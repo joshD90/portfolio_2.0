@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useForm, ValidationError } from "@formspree/react";
 import HomeIcon from "@mui/icons-material/Home";
+import { motion } from "framer-motion";
 
 function Contact() {
   const [state, handleSubmit] = useForm("mgebwqjv");
@@ -25,7 +26,10 @@ function Contact() {
     );
 
   return (
-    <div
+    <motion.div
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
       className="w-full h-screen flex flex-col items-center justify-center pt-10"
       style={{
         backgroundImage:
@@ -75,7 +79,7 @@ function Contact() {
           </div>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

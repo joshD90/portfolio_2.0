@@ -30,7 +30,7 @@ const HomeProject: FC<props> = ({ project }) => {
 
   return (
     <section
-      className={`shadow-md rounded-md overflow-hidden border-2 border-stone-500 relative projectDiv hover:scale-105 transition-all`}
+      className={`shadow-md rounded-md overflow-hidden border-2 border-stone-500 relative projectDiv hover:scale-105 transition-all w-full`}
       style={{
         gridRow: `span ${gridSpan[0]}`,
         gridColumn: `span ${gridSpan[1]}`,

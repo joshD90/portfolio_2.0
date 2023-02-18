@@ -1,8 +1,11 @@
 import { FC } from "react";
+import { useNavigate } from "react-router-dom";
 
 import profilePic from "../assets/porfolio.jpg";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import SendIcon from "@mui/icons-material/Send";
+
+import "./head.css";
 
 type Props = {
   goToAbout: () => void;
@@ -10,6 +13,7 @@ type Props = {
 };
 
 const Head: FC<Props> = ({ goToAbout, goToProjects }) => {
+  const navigate = useNavigate();
   return (
     <div className="w-full h-screen flex relative">
       <div className="w-1/2 h-full bg-emerald-600 text-white pr-5 overflow-hidden">
@@ -23,7 +27,7 @@ const Head: FC<Props> = ({ goToAbout, goToProjects }) => {
           </h2>
         </div>
         <button
-          className="absolute shadow-md bottom-10 left-1/2 p-3 rounded-md bg-white text-stone-600 font-bold opacity-90 hover:opacity-100 hover:shadow-xl"
+          className="absolute shadow-md bottom-10 left-1/2 p-3 rounded-md bg-white text-stone-600 font-bold opacity-90 hover:opacity-100 hover:shadow-xl active:rotate"
           style={{ transform: "translateX(-133%)" }}
           onClick={goToProjects}
         >
@@ -41,7 +45,12 @@ const Head: FC<Props> = ({ goToAbout, goToProjects }) => {
         <h2 className="text-2xl sm:text-5xl font-bold w-1/2 ml-5">
           Web Developer
         </h2>
-        <button className="absolute shadow-md bottom-10 left-1/2 p-3 rounded-md translate-x-1/3 bg-emerald-500 text-white font-bold flex items-center opacity-90 hover:opacity-100 hover:shadow-xl">
+        <button
+          className="absolute shadow-md bottom-10 left-1/2 p-3 rounded-md translate-x-1/3 bg-emerald-500 text-white font-bold flex items-center opacity-90 hover:opacity-100 hover:shadow-xl"
+          onClick={() => {
+            navigate("/contact");
+          }}
+        >
           Contact <SendIcon style={{ fontSize: "1.2rem" }} className="pl-1" />
         </button>
         {/* bouncing arrow downs - set width full to center other divs without transform as transform breaks the animate */}
@@ -63,7 +72,7 @@ const Head: FC<Props> = ({ goToAbout, goToProjects }) => {
       <div onClick={goToAbout}>
         <img
           src={profilePic}
-          className="h-36 w-36 object-cover rounded-full border-8 border-stone-700 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 shadow-sm cursor-pointer"
+          className="h-36 w-36 object-cover rounded-full border-8 border-stone-700 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 shadow-sm cursor-pointer profilePic transition-all"
         />
       </div>
     </div>

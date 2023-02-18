@@ -3,7 +3,7 @@ import { Email, GitHub, LinkedIn, Phone } from "@mui/icons-material";
 
 const Footer = () => {
   return (
-    <div className="bg-emerald-600 h-20 flex items-center text-emerald-50 justify-between p-5 text-sm">
+    <div className="w-full bg-emerald-600 h-20 px-5 flex items-center text-emerald-50 justify-between text-sm">
       <div className="md:w-1/3">
         <div className="flex items-center gap-2">
           <Email />

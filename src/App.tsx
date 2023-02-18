@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 import LandingPage from "./containers/LandingPage";
 import Navbar from "./components/Navbar";
@@ -7,16 +8,20 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
+  const location = useLocation();
+
   return (
-    <Router>
+    <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/projects/:projectName" element={<SingleProject />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <AnimatePresence>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/projects/:projectName" element={<SingleProject />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </AnimatePresence>
       <Footer />
-    </Router>
+    </>
   );
 }
 

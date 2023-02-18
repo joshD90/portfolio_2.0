@@ -1,4 +1,5 @@
 import { FC, ReactNode } from "react";
+import { motion } from "framer-motion";
 
 type Props = {
   title?: string;
@@ -9,20 +10,33 @@ type Props = {
 const SingleProjectSection: FC<Props> = ({ title, content, child }) => {
   if (child)
     return (
-      <section className="bg-white shadow-lg p-5 pt-3 mb-10 text-stone-800 bg-opacity-90">
+      <motion.section
+        initial={{ y: 20, scale: 0.9 }}
+        whileInView={{ y: 0, scale: 1 }}
+        className="bg-white shadow-lg p-5 pt-3 mb-10 text-stone-800 bg-opacity-90 w-full sm:w-11/12 md:w-4/5"
+      >
         {child}
-      </section>
+      </motion.section>
     );
 
   return (
-    <section className="bg-white shadow-lg p-5 pt-3 mb-10 text-stone-800 bg-opacity-90">
-      {title && <h4 className="text-stone-600 pb-2 text-xl">{title}</h4>}
+    <motion.section
+      initial={{ y: 20 }}
+      whileInView={{ y: 0 }}
+      viewport={{ once: true }}
+      className="w-full bg-white shadow-lg p-5 pt-3 mb-10 text-stone-800 bg-opacity-90 sm:w-11/12 lg:w-4/5"
+    >
+      {title && <h4 className="text-stone-600 pb-2 pl-2 text-xl">{title}</h4>}
       {typeof content === "string" ? (
         <p>{content}</p>
       ) : (
-        content?.map((item) => <p className="mb-2">{item}</p>)
+        content?.map((item) => (
+          <p className="mb-2 ml-2" key={item}>
+            {item}
+          </p>
+        ))
       )}
-    </section>
+    </motion.section>
   );
 };
 
