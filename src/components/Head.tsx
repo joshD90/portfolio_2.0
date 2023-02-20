@@ -15,12 +15,12 @@ type Props = {
 const Head: FC<Props> = ({ goToAbout, goToProjects }) => {
   const navigate = useNavigate();
   return (
-    <div className="w-full h-screen flex relative">
+    <div className="w-full h-screen flex relative ">
       <div className="w-1/2 h-full bg-emerald-600 text-white pr-5 overflow-hidden">
         <div className="h-1/4 sm:h-1/3 flex items-end justify-end">
           <h1 className="text-8xl sm:text-9xl p-0 m-0">Hi.</h1>
         </div>
-        <div className="h-2/5 sm:h-48"></div>
+        <div className="h-2/5 sm:h-1/3"></div>
         <div className="w-full flex justify-end">
           <h2 className="text-xl sm:text-4xl w-1/2 text-right font-bold">
             A Full Stack
@@ -41,7 +41,7 @@ const Head: FC<Props> = ({ goToAbout, goToProjects }) => {
             My name is Josh
           </h2>
         </div>
-        <div className="h-2/5 sm:h-48"></div>
+        <div className="h-2/5 sm:h-1/3"></div>
         <h2 className="text-2xl sm:text-5xl font-bold w-1/2 ml-5">
           Web Developer
         </h2>

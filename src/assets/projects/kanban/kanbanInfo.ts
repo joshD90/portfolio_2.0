@@ -1,22 +1,35 @@
 import { Project } from "../projectArray";
-import trelloBanner from "../trello.png";
+
+import kanbanBoard from "./kanbanImages/kanbanBoard.png";
 
 export const kanbanInfo: Project = {
-  bannerImage: trelloBanner,
-  title: "Trello",
-  description: "A mockup of Trello to explore typescript",
+  bannerImage: kanbanBoard,
+  title: "Kanban Board",
+  description:
+    "A mockup of Trello to explore typescript secured by Passportjs and JWT",
   gridSpan: { xl: [3, 3], lg: [3, 3], md: [3, 3] },
   highlights:
-    "Application of Complex Logic to implement game rules.  Dynamic room allocation through Socket.io. Includes take functionality, check, checkmate, en-passante, queening, draw-conditions including stalemate",
+    "Full CRUD operations with mySQL with prepared statements to sanitize requests. React click and drag to transfer one and Authentication with Passportjs and JWT",
 
-  gitLink: "https://github.com/joshD90/chess_app",
-  siteLink: "https://chess.joshuadanceywebdev.ie",
-  techs: ["React", "Sass", "Sockets.io", "Nginx", "Javascript", "HTML Canvas"],
-  keyLearnings: ["Recursion", "Complex Logic"],
+  gitLink: "https://github.com/joshD90/kanban",
+  siteLink: "https://kanban.joshuadanceywebdev.ie",
+  techs: [
+    "React",
+    "Typescript",
+    "Tailwind",
+    "mySQL",
+    "Passportjs",
+    "JWT Authentication",
+  ],
+  keyLearnings: [
+    "Clean Code Practices",
+    "How to use Typescript in larger project",
+    "mySQL and prepared statements",
+  ],
   motivation: [
-    "I created this project as I wished to create a javascript based game where I could deal with complex logic",
-    "I have been passionate about chess for a number of years and so decided that this would be an opportunity to demonstrate a capacity for a larger scale game to demonstrate a range of my skills.",
-    "I had previously used recursive directional square checking in an X's and O's game.  All of the game logic was self-conceptualised and there was no follow along tutorials in helping me build this project",
+    "I was learning about Agile, Scrum and Kanban and wished to solidify my learning of this topic by creating a Kanban board project.",
+    "I had also been learning about Typescript and wished to take on a full-stack project where I could practice what I had learned",
+    "I had also been learning mySQL and wanted a larger project to practice all CRUD techniques to do this with also",
   ],
   link: "kanban",
 };

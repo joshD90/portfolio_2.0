@@ -63,6 +63,13 @@ const Navbar: FC = () => {
               <span>Chess Game</span>
             </Link>
             <Link
+              to="/projects/kanban"
+              className="hover:bg-emerald-700 bg-opacity-60 px-4 p-2"
+              replace
+            >
+              <span>Kanban</span>
+            </Link>
+            <Link
               to="/projects/static "
               className="hover:bg-emerald-700 bg-opacity-60 px-4 p-2"
               replace

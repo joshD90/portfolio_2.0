@@ -11,7 +11,7 @@ const AboutMe = React.forwardRef<Ref>((props, ref) => {
     <motion.div
       initial={{ y: 20 }}
       whileInView={{ y: 0 }}
-      className="max-w-screen bg-emerald-50 p-10 shadow-lg"
+      className="max-w-screen bg-emerald-50 py-10 shadow-lg flex items-center justify-center"
       ref={ref}
     >
       <SingleProjectSection title={aboutMe.title} content={aboutMe.content} />

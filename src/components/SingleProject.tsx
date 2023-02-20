@@ -16,6 +16,8 @@ import { staticImages } from "../assets/projects/static/staticImagesIndex";
 import { staticInfo } from "../assets/projects/static/staticInfo";
 
 import SwiperWrapper from "./SwiperWrapper";
+import { kanbanInfo } from "../assets/projects/kanban/kanbanInfo";
+import { kanbanImages } from "../assets/projects/kanban/kanbanImageIndex";
 
 export type FullProject = {
   info: Project;
@@ -35,13 +37,15 @@ const SingleProject: FC = () => {
       return setProjectInfo({ info: eCommerceInfo, images: eCommerceImages });
     if (projectName === "static")
       return setProjectInfo({ info: staticInfo, images: staticImages });
+    if (projectName === "kanban")
+      return setProjectInfo({ info: kanbanInfo, images: kanbanImages });
     setProjectInfo(null);
   }, [projectName]);
 
   //if there is no project or it is loading return this
   if (!projectInfo)
     return (
-      <div className="w-full h-full bg-emerald-50 flex items-center justify-center">
+      <div className="w-full h-screen bg-emerald-50 flex items-center justify-center">
         Cant Seem To Find This Project
       </div>
     );
