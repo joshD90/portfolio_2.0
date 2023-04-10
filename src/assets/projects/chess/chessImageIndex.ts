@@ -1,25 +1,25 @@
 //chess project images
-import board from "./swiperImages/board.png";
-import castling from "./swiperImages/castling.png";
-import check from "./swiperImages/check.png";
-import landingPage from "./swiperImages/landingPage.png";
-import queening from "./swiperImages/queening.png";
-import roomReallocation from "./swiperImages/roomReallocation.png";
-import stalemate from "./swiperImages/stalemate.png";
-import winTimeout from "./swiperImages/winTimeout.png";
+import board from "./swiperImages/board.jpg";
+import castling from "./swiperImages/castling.jpg";
+import check from "./swiperImages/check.jpg";
+import landingPage from "./swiperImages/landingPage.jpg";
+import queening from "./swiperImages/queening.jpg";
+import roomReallocation from "./swiperImages/roomReallocation.jpg";
+import stalemate from "./swiperImages/stalemate.jpg";
+import winTimeout from "./swiperImages/winTimeout.jpg";
 
 export const chessImages = [
   {
     image: landingPage,
-    text: "The player enters there name and can select a game length, the server will pair this with another player in rooms of two",
+    text: "A player can choose to play on a single screen or with someone online.  Online play pairs the player dynamically with another user",
   },
   {
     image: board,
-    text: "The board is drawn dynamically and a grid set up.  Player pieces are drawn on HTML 5.  The timer is controlled server-side",
+    text: "The board is drawn dynamically and a grid set up.  Player pieces are drawn on HTML 5 canvas.  The timer is controlled server-side",
   },
   {
     image: castling,
-    text: "Legal moves are calculated through recursively checking in all directions.  Each piece has their own unique moves such as 'en passante' and castling. Rules such as no castling through check is also implement",
+    text: "Legal moves are calculated through recursively checking in all directions.  Comprehensive chess rule are accounted for such as 'en passante' and no castling through check",
   },
   {
     image: check,
@@ -27,18 +27,18 @@ export const chessImages = [
   },
   {
     image: queening,
-    text: "The pawn can promote to any piece as per chess rules and all win /draw conditions are dealt with if resulting from this",
+    text: "The pawn can promote to any piece as per chess rules and all win / draw conditions are dealt if resulting from the promotion",
   },
   {
     image: stalemate,
-    text: "Checkmate can be achieved, as can stalemate, this is done when the king is in check and there are no possible moves that can remove this check",
+    text: "Checkmate can be achieved, as can stalemate, this is done when the king is in check and there are no possible moves that can avoid this check",
   },
   {
     image: winTimeout,
-    text: "Win and draw conditions are managed, as well as edge cases such as draw by insufficient material vs timeout",
+    text: "Win and draw conditions are managed, as well as edge cases such as draw by insufficient material vs timeout. After the match a rematch can be offered or a new game sought",
   },
   {
     image: roomReallocation,
-    text: "If another player disconnects, the socket will attempt to connect the player with another player of the same time",
+    text: "If another player disconnects, the user can opt to play another game or return to the lobby",
   },
 ];
