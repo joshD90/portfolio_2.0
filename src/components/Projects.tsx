@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 
 import { projectArray } from "../assets/projects/projectArray";
 import HomeProject from "./HomeProject";

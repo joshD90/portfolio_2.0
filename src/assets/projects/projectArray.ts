@@ -2,6 +2,7 @@ import { staticInfo } from "./static/staticInfo";
 import { eCommerceInfo } from "./eCommerce/eCommerceInfo";
 import { chessInfo } from "./chess/chessInfo";
 import { kanbanInfo } from "./kanban/kanbanInfo";
+import { socialInfo } from "./social/socialInfo";
 
 type GridSpan = {
   xl: number[];
@@ -28,4 +29,5 @@ export const projectArray: Project[] = [
   chessInfo,
   kanbanInfo,
   staticInfo,
+  socialInfo,
 ];

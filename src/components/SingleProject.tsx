@@ -18,6 +18,8 @@ import { staticInfo } from "../assets/projects/static/staticInfo";
 import SwiperWrapper from "./SwiperWrapper";
 import { kanbanInfo } from "../assets/projects/kanban/kanbanInfo";
 import { kanbanImages } from "../assets/projects/kanban/kanbanImageIndex";
+import { socialInfo } from "../assets/projects/social/socialInfo";
+import { socialImages } from "../assets/projects/social/socialImages/socialImageIndex";
 
 export type FullProject = {
   info: Project;
@@ -39,6 +41,8 @@ const SingleProject: FC = () => {
       return setProjectInfo({ info: staticInfo, images: staticImages });
     if (projectName === "kanban")
       return setProjectInfo({ info: kanbanInfo, images: kanbanImages });
+    if (projectName === "social")
+      return setProjectInfo({ info: socialInfo, images: socialImages });
     setProjectInfo(null);
   }, [projectName]);
 

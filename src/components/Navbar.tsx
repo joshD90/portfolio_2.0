@@ -76,6 +76,13 @@ const Navbar: FC = () => {
             >
               <span>Static</span>
             </Link>
+            <Link
+              to="/projects/social"
+              className="hover:bg-emerald-700 bg-opacity-60 px-4 p-2"
+              replace
+            >
+              <span>Social - In Progress</span>
+            </Link>
           </div>
         </span>
         <Link

@@ -13,7 +13,7 @@ const SingleProjectSection: FC<Props> = ({ title, content, child }) => {
       <motion.section
         initial={{ y: 20, scale: 0.9 }}
         whileInView={{ y: 0, scale: 1 }}
-        className="bg-white shadow-lg p-5 pt-3 mb-10 text-stone-800 bg-opacity-90 sm:w-11/12 lg:w-4/5"
+        className="bg-white shadow-lg p-5 pt-3 mb-10 text-stone-800 bg-opacity-90 w-full sm:w-11/12 lg:w-4/5"
       >
         {child}
       </motion.section>
